@@ -1,0 +1,48 @@
+{% load static %}
+<html lang="en">
+    <head>
+        <title>MSP Site</title>
+        <link rel="stylesheet" href="{% static 'css/events.css' %}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    </head>
+    <form action="action_page.php">
+        <div class="container">
+            <div  class="register">
+                <h1>Register</h1>
+            </div>
+            
+            <br><br><hr>
+            <hr>
+            <i class="fa fa-user icon"></i>
+            <label for="name"><b>First Name</b></label>
+                <input type="text" placeholder="Required" required name="name"/>
+            <br><br>
+            <label for="name"><b>Last Name</b></label>
+                <input type="text" placeholder="Required" required name="name"/>
+            <br><br>
+            <label for="email"><b>Email</b></label>
+                <input type="email" placeholder="Required" name="email" required/>
+            <br><br>
+            <label for="id"><b>BITS Id</b></label>
+                <input type=text placeholder="Required" required />
+            <br><br>
+            <label for="contact no."><b>Contact Number</b></label>
+                <input type="tel" placeholder="Required" required name="contact no." size= "10" inputmode="numeric" minlength="10" maxlength="10"/>
+            <br><br><br><br>  
+        </div>
+        <script type="text">
+            function checkForm(action){
+                if(form.inputfield.value == "name") {
+                    alert("Error: Input is invalid!");
+                    form.inputfield.focus();
+                    return false;
+                }
+            }
+        </script>
+        <div class="clearfix">
+            <button type="button" class="btn btn-success" style="width: 400px; height: 100px;">Start Test</button>
+        </div>
+</form>
+</html>  
