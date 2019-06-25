@@ -1,11 +1,48 @@
 <html>
-    <head>
-        <title>MSP Site</title>
-        
-        </head>
-    <body>
-        <h1>Test!</h1>
-        <p>It works!</p>
-        
-    </body>
+	<head>
+		<title>MSP Site</title>
+		
+		</head>
+	<body>
+		<h1>Test!</h1>
+		<p>It works!</p>
+		<p>Time Left: <span id="timer"></span></p>
+<script>
+
+var hours = 2;
+var minutes = 59;
+var seconds = 59;
+
+var x = setInterval(function() {
+
+document.getElementById("timer").innerHTML = "0" +hours + " : "
+  + minutes + " : " + seconds;
+seconds--;
+(seconds<10) ? "0"+seconds : seconds;
+(minutes<10) ? "0"+minutes : minutes;
+  if (seconds < 0) {
+  	minutes--;
+  	seconds=59;
+  }
+  if (seconds < 10) {
+  	seconds="0"+seconds;
+  }
+  if (minutes < 0) {
+   hours--;
+  	seconds=59;
+  	minutes=59;
+  }
+  if (minutes < 10) {
+   minutes="0"+minutes;
+  }
+  (hours<10) ? "0"+hours:hours;
+  if(hours<0){
+  	clearInterval(x);
+	document.getElementById("demo").innerHTML = "Time Over";
+  }
+
+	
+}, 1000);
+</script>
+</body>
 </html>
